@@ -1,0 +1,42 @@
+!!!
+
+%html{html_attrs(lang = 'en-US')}
+  %head
+    %title 
+      Blogazine
+    
+    %meta{"http-equiv" => "Content-Type", :content => "text/html; charset=utf-8"}/
+    %meta{:name => "description", :content => "A Design and Development blog of Rizwan Reza."}/
+    %meta{:name => "keywords", :content => "design, development, blog, interaction design, ruby, rails, rizwan, reza"}/
+    %meta{:name => "author", :content => "Rizwan Reza"}/
+        
+    = stylesheet_link_tag "index", :media => "screen, projection"
+
+    = auto_discovery_link_tag(:atom, "http://feeds.feedburner.com/rizwanreza")
+    %link{:rel => "shortcut icon", :href => '/favicon.ico', :type => 'image/x-icon'}
+    
+    = javascript_include_tag "jquery"
+    = yield(:head)
+  %body
+    #container
+
+
+!!! html
+%html
+  %head
+    
+  %body
+    #container
+      %h1 Contents
+
+      #table
+        %ul#contents
+          - @posts.each do |post|
+            %li
+              = link_to_published_post(post)
+              %p
+                = post.summary
+          %li
+            Lorem Ipsum
+            %p
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Vivamus vitae risus vitae lorem iaculis placerat. Aliquam sit amet felis. Etiam congue. Donec risus risus, pretium ac, tincidunt eu, tempor eu, quam. Morbi blandit mollis magna. Suspendisse eu tortor. Donec vitae felis nec ligula blandit rhoncus. Ut a pede ac neque mattis facilisis. Nulla nunc ipsum, sodales vitae, hendrerit non, imperdiet ac, ante. Morbi sit amet mi. Ut magna. Curabitur id est. Nulla velit. Sed consectetuer sodales justo. Aliquam dictum gravida libero.

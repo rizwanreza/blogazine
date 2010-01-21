@@ -1,0 +1,27 @@
+- title "Post"
+
+%p
+  %strong Title:
+  =h @post.title
+%p
+  %strong Slug:
+  =h @post.slug
+%p
+  %strong Summary:
+  =h @post.summary
+%p
+  %strong Body:
+  =h @post.body
+%p
+  %strong Sass:
+  =h @post.sass
+%p
+  %strong Published:
+  =h @post.published
+
+%p
+  = link_to "Edit", edit_admin_post_path(@post)
+  |
+  = link_to "Destroy", admin_post_path(@post), :confirm => 'Are you sure?', :method => :delete
+  |
+  = link_to "View All", admin_posts_path

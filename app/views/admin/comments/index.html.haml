@@ -1,0 +1,19 @@
+- title "Comments"
+
+%table
+  %tr
+    %th Name
+    %th Email
+    %th Website
+    %th Body
+    %th Moderated
+  - for comment in @comments
+    %tr
+      %td= h comment.name
+      %td= h comment.email
+      %td= h comment.website
+      %td= h comment.body
+      %td= h comment.moderated
+      %td= link_to 'Show', admin_comment_path(comment)
+      %td= link_to 'Edit', edit_admin_comment_path(comment)
+      %td= link_to 'Destroy', admin_comment_path(comment), :confirm => 'Are you sure?', :method => :delete

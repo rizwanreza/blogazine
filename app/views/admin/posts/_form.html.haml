@@ -1,0 +1,28 @@
+- form_for(['admin', @post], :html => {:multipart => true}) do |f|
+  = f.error_messages
+  %p
+    = f.label :title
+    %br
+    = f.text_field :title
+  %p
+    = f.label :slug
+    %br
+    = f.text_field :slug
+  %p
+    = f.label :summary
+    %br
+    = f.text_area :summary
+  %p
+    = f.label :body
+    %br
+    = f.text_area :body
+  %p
+    = f.label :sass
+    %br
+    = f.file_field :sass
+  %p
+    = f.label :published
+    %br
+    = f.check_box :published
+  %p
+    = f.submit "Submit"

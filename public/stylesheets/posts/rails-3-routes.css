@@ -1,0 +1,407 @@
+/* line 4, ../../../vendor/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_reset.sass */
+html, body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline; }
+
+/* line 12, ../../../vendor/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_reset.sass */
+div, span, object, iframe, h1, h2, h3, h4, h5, h6, p,
+pre, a, abbr, acronym, address, code, del, dfn, em, img,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, tbody, tfoot, thead, tr {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline; }
+
+/* line 16, ../../../vendor/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_reset.sass */
+blockquote, q {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+  quotes: "" ""; }
+  /* line 42, ../../../vendor/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_reset.sass */
+  blockquote:before, q:before,
+  blockquote:after, q:after {
+    content: ""; }
+
+/* line 18, ../../../vendor/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_reset.sass */
+th, td, caption {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+/* line 20, ../../../vendor/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_reset.sass */
+table {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle; }
+
+/* line 22, ../../../vendor/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_reset.sass */
+a img {
+  border: none; }
+
+/* line 4, ../../../vendor/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_reset.sass */
+html, body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline; }
+
+/* line 12, ../../../vendor/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_reset.sass */
+div, span, object, iframe, h1, h2, h3, h4, h5, h6, p,
+pre, a, abbr, acronym, address, code, del, dfn, em, img,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, tbody, tfoot, thead, tr {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline; }
+
+/* line 16, ../../../vendor/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_reset.sass */
+blockquote, q {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+  quotes: "" ""; }
+  /* line 42, ../../../vendor/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_reset.sass */
+  blockquote:before, q:before,
+  blockquote:after, q:after {
+    content: ""; }
+
+/* line 18, ../../../vendor/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_reset.sass */
+th, td, caption {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+/* line 20, ../../../vendor/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_reset.sass */
+table {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle; }
+
+/* line 22, ../../../vendor/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_reset.sass */
+a img {
+  border: none; }
+
+/* line 39, ../../../app/stylesheets/posts/rails-3-routes.sass */
+h1 {
+  font-family: Adobe Caslon Pro; }
+
+/* line 42, ../../../app/stylesheets/posts/rails-3-routes.sass */
+p {
+  margin-bottom: 18px;
+  line-height: 18px;
+  font-size: 14px; }
+
+/* line 47, ../../../app/stylesheets/posts/rails-3-routes.sass */
+.lead {
+  font-size: 24px;
+  line-height: 30px;
+  margin-bottom: 36px;
+  font-family: Adobe Caslon Pro; }
+
+/* line 53, ../../../app/stylesheets/posts/rails-3-routes.sass */
+h1 {
+  font-size: 48px;
+  line-height: 36px;
+  margin-bottom: 36px;
+  letter-spacing: -1px;
+  font-weight: 600;
+  margin-top: 72px; }
+
+/* line 61, ../../../app/stylesheets/posts/rails-3-routes.sass */
+h2 {
+  font-size: 18px;
+  line-height: 18px;
+  margin-bottom: 18px; }
+
+/* line 66, ../../../app/stylesheets/posts/rails-3-routes.sass */
+h3 {
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: white;
+  font-weight: bold;
+  letter-spacing: -1px;
+  word-spacing: 3px; }
+
+/* line 75, ../../../app/stylesheets/posts/rails-3-routes.sass */
+code, pre {
+  font-family: Monaco, Menlo, 'andale mono', 'lucida console', monospace;
+  color: #efffcd; }
+
+/* line 79, ../../../app/stylesheets/posts/rails-3-routes.sass */
+pre {
+  background: #2e2633;
+  background: rgba(46, 38, 51, 0.8);
+  padding: 5px 10px 5px 10px;
+  font-size: 90%;
+  line-height: 1.8em;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+  margin-bottom: 18px;
+  min-height: 54px;
+  -webkit-border-radius: 5px; }
+
+/* line 94, ../../../app/stylesheets/posts/rails-3-routes.sass */
+.rails-2 {
+  background: rgba(46, 38, 51, 0.8) url('/images/rails-2.png') top right no-repeat; }
+
+/* line 97, ../../../app/stylesheets/posts/rails-3-routes.sass */
+.rails-3 {
+  background: rgba(46, 38, 51, 0.8) url('/images/rails-3.png') top right no-repeat; }
+
+/* line 101, ../../../app/stylesheets/posts/rails-3-routes.sass */
+a {
+  color: #FFC1E5; }
+
+/* line 104, ../../../app/stylesheets/posts/rails-3-routes.sass */
+.spch-bub-inside {
+  position: relative; }
+
+/* line 107, ../../../app/stylesheets/posts/rails-3-routes.sass */
+a.spch-bub-inside {
+  color: #abbb89;
+  text-decoration: none; }
+
+/* line 112, ../../../app/stylesheets/posts/rails-3-routes.sass */
+.spch-bub-inside em {
+  font-style: normal;
+  background: #abbb89;
+  color: #FFF;
+  padding: 0 5px 0 4px;
+  -moz-border-radius: 0.25em;
+  -webkit-border-radius: 0.25em;
+  border-radius: 0.25em;
+  position: relative; }
+/* line 122, ../../../app/stylesheets/posts/rails-3-routes.sass */
+.spch-bub-inside .point {
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 1.1em;
+  left: 0.4em;
+  display: block;
+  border-left: 0.45em solid #abbb89;
+  border-bottom: 0.45em solid #FFF;
+  border-bottom: 0.45em solid rgba(0,0,0,0);
+  overflow: hidden; }
+
+/* line 135, ../../../app/stylesheets/posts/rails-3-routes.sass */
+a.spch-bub-inside:hover {
+  color: #abbb89; }
+  /* line 138, ../../../app/stylesheets/posts/rails-3-routes.sass */
+  a.spch-bub-inside:hover em {
+    cursor: pointer;
+    background: #efffcd;
+    color: #abbb89; }
+  /* line 143, ../../../app/stylesheets/posts/rails-3-routes.sass */
+  a.spch-bub-inside:hover .point {
+    border-left: 0.45em solid #efffcd; }
+
+/* line 147, ../../../app/stylesheets/posts/rails-3-routes.sass */
+.wrapper {
+  width: 950px;
+  margin: 0 auto;
+  overflow: hidden;
+  display: inline-block; }
+  /* line 5, ../../../vendor/gems/compass-0.8.17/frameworks/compass/stylesheets/compass/utilities/general/_hacks.sass */
+  .wrapper {
+    display: block; }
+
+/* line 150, ../../../app/stylesheets/posts/rails-3-routes.sass */
+body {
+  background: #99173c url('/images/bg.png');
+  color: #efffcd;
+  font-family: Helvetica Neue; }
+  /* line 156, ../../../app/stylesheets/posts/rails-3-routes.sass */
+  body #header {
+    background: #2e2633;
+    background: rgba(46, 38, 51, 0.8); }
+    /* line 160, ../../../app/stylesheets/posts/rails-3-routes.sass */
+    body #header .wrapper {
+      height: 24px; }
+      /* line 163, ../../../app/stylesheets/posts/rails-3-routes.sass */
+      body #header .wrapper #comments {
+        display: inline;
+        float: left;
+        margin-right: 0;
+        width: 150px;
+        display: inline;
+        float: right;
+        position: relative;
+        margin: 0 -40px 1.5em 40px;
+        font-size: 80%;
+        font-weight: bold;
+        letter-spacing: -1px;
+        padding-top: 3px;
+        color: #abbb89; }
+        /* line 101, ../../../vendor/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
+        * html body #header .wrapper #comments {
+          overflow-x: hidden; }
+      /* line 172, ../../../app/stylesheets/posts/rails-3-routes.sass */
+      body #header .wrapper #logo {
+        display: inline;
+        float: left;
+        margin-right: 10px;
+        width: 150px;
+        background: url(/images/logo-small.png) 0 5px no-repeat;
+        text-indent: -9999px; }
+        /* line 101, ../../../vendor/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
+        * html body #header .wrapper #logo {
+          overflow-x: hidden; }
+  /* line 178, ../../../app/stylesheets/posts/rails-3-routes.sass */
+  body #lead-content {
+    display: inline;
+    float: left;
+    margin-right: 10px;
+    width: 750px; }
+    /* line 101, ../../../vendor/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
+    * html body #lead-content {
+      overflow-x: hidden; }
+  /* line 181, ../../../app/stylesheets/posts/rails-3-routes.sass */
+  body #lead-image {
+    display: inline;
+    float: left;
+    margin-right: 0;
+    width: 190px;
+    margin-top: -20px;
+    margin-bottom: 14px; }
+    /* line 101, ../../../vendor/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
+    * html body #lead-image {
+      overflow-x: hidden; }
+  /* line 186, ../../../app/stylesheets/posts/rails-3-routes.sass */
+  body #compare-rails-3 {
+    display: inline;
+    float: left;
+    margin-right: 10px;
+    width: 470px; }
+    /* line 101, ../../../vendor/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
+    * html body #compare-rails-3 {
+      overflow-x: hidden; }
+  /* line 189, ../../../app/stylesheets/posts/rails-3-routes.sass */
+  body #compare-rails-2 {
+    display: inline;
+    float: left;
+    margin-right: 0;
+    width: 470px; }
+    /* line 101, ../../../vendor/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
+    * html body #compare-rails-2 {
+      overflow-x: hidden; }
+  /* line 192, ../../../app/stylesheets/posts/rails-3-routes.sass */
+  body #default-route-text, body #default-route-code, body #regular-route-text, body #named-routes-text, body #named-routes-code, body #empty-route-text {
+    display: inline;
+    float: left;
+    margin-right: 10px;
+    width: 230px; }
+    /* line 101, ../../../vendor/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
+    * html body #default-route-text, * html body #default-route-code, * html body #regular-route-text, * html body #named-routes-text, * html body #named-routes-code, * html body #empty-route-text {
+      overflow-x: hidden; }
+  /* line 195, ../../../app/stylesheets/posts/rails-3-routes.sass */
+  body #regular-route-code, body #empty-route-code {
+    display: inline;
+    float: left;
+    margin-right: 0;
+    width: 230px; }
+    /* line 101, ../../../vendor/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
+    * html body #regular-route-code, * html body #empty-route-code {
+      overflow-x: hidden; }
+  /* line 198, ../../../app/stylesheets/posts/rails-3-routes.sass */
+  body #footer {
+    background: black;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    font-size: 80%; }
+    /* line 203, ../../../app/stylesheets/posts/rails-3-routes.sass */
+    body #footer .wrapper {
+      padding-top: 18px; }
+      /* line 205, ../../../app/stylesheets/posts/rails-3-routes.sass */
+      body #footer .wrapper #article {
+        display: inline;
+        float: left;
+        margin-right: 10px;
+        width: 710px; }
+        /* line 101, ../../../vendor/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
+        * html body #footer .wrapper #article {
+          overflow-x: hidden; }
+      /* line 207, ../../../app/stylesheets/posts/rails-3-routes.sass */
+      body #footer .wrapper #about {
+        display: inline;
+        float: left;
+        margin-right: 0;
+        width: 230px; }
+        /* line 101, ../../../vendor/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
+        * html body #footer .wrapper #about {
+          overflow-x: hidden; }
+        /* line 209, ../../../app/stylesheets/posts/rails-3-routes.sass */
+        body #footer .wrapper #about #logo {
+          text-indent: -9999px;
+          height: 28px;
+          background: url("/images/logo.png") top left no-repeat; }
+      /* line 213, ../../../app/stylesheets/posts/rails-3-routes.sass */
+      body #footer .wrapper #copyright {
+        font-size: 90%;
+        color: gray;
+        color: rgba(255,255,255,0.6); }

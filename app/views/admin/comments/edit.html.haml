@@ -1,0 +1,8 @@
+- title "Edit Comment"
+
+= render :partial => 'form'
+
+%p
+  = link_to "Show", admin_comment_path(@comment)
+  |
+  = link_to "View All", admin_comments_path

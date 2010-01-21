@@ -1,0 +1,85 @@
+// This is where the main styles would go. 
+
+@import _base.sass
+
+body 
+  :background = !secondary
+  :font-family = !font
+  :color = !tertiary
+  
+  #punchline
+    +column(20)
+    :padding-top 40px
+    
+    #description
+      :font-size 130%
+      :font-style italic
+      :letter-spacing -1px
+      :margin-bottom 6px
+    
+    #join-button
+      :background transparent url("/images/join-bg.gif") repeat-x top left
+      :height 30px
+      :width 100px
+      :border 1px solid transparent
+      :-webkit-border-radius 7px
+      :text-align center
+
+      h2
+        :padding-top 2px
+
+  #logo
+    +column(4, "last")
+    :text-indent -9999px
+    :background url(/images/logo.png) no-repeat top left
+    :width 100px
+    :height 126px
+    :margin-top 10px
+
+  #participants
+    :-webkit-column-count 3
+    :-webkit-column-gap 10px
+    :-moz-column-count 3
+    :-moz-column-gap 10px
+    :column-count 3
+    :column-gap 10px
+  
+  #header
+    :background = !tertiary
+    :height 24px
+    :text-align right
+    
+    a
+      :color = !secondary
+      :font-size 80%
+      :text-decoration none
+      :border = 2px solid transparent
+      :-webkit-border-radius 3px
+      
+      &:hover
+        :background = !secondary
+        :color = !tertiary
+        
+  #footer
+    :background = !primary
+    :font-size 80%
+    :color = !secondary - #181818
+    :line-height 18px
+    :padding 20px 0
+    
+    #about
+      +column(8)
+      
+
+      
+    #blog
+      +column(16, "last")
+
+    #about, #blog
+      h3
+        :font-size 100%
+        :margin-bottom 6px
+        :color = !secondary
+        
+    #info
+      :font-size 85%

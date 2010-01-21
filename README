@@ -1,0 +1,14 @@
+Blogazine is a blog publishing system with a twist. It's been build from the ground up to make a weblog for custom-designed posts. Every post has a separate stylesheet to it. Don't use it as a regular blog posting platform unless you're ready for a headache! 
+
+== Getting Started
+
+1. Clone the project
+2. Install required gems by running rake gems:install.
+3. Setup databases in config/database.yml and run rake db:create.
+4. Migrate the databases by running rake db:migrate.
+5. Fire up the server.
+6. Start publishing.
+
+== Under Development
+
+This is currently under heavy development. It is not recommended to use this in production until I say so here. Thanks!

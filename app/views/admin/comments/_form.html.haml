@@ -1,0 +1,24 @@
+- form_for ['admin', @comment] do |f|
+  = f.error_messages
+  %p
+    = f.label :name
+    %br
+    = f.text_field :name
+  %p
+    = f.label :email
+    %br
+    = f.text_field :email
+  %p
+    = f.label :website
+    %br
+    = f.text_field :website
+  %p
+    = f.label :body
+    %br
+    = f.text_area :body
+  %p
+    = f.label :moderated
+    %br
+    = f.check_box :moderated
+  %p
+    = f.submit "Submit"
