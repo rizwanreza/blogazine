@@ -1,12 +1,16 @@
 ActionController::Routing::Routes.draw do |map|
+  map.devise_for :admins, :as => 'admin',  :path_names => { :sign_in => 'login', :sign_out => 'logout' }
+
   map.namespace :admin do |admin|
     admin.resources :posts
     admin.resources :comments, :only => [:index, :show, :update, :edit, :destroy]
   end
 
-  map.resources :comments, :only => [:new, :create]
+  map.connect 'admin', :controller => 'admin/posts', :action => 'index'
 
   map.slug '/:slug', :controller => 'posts', :action => 'show'
+  map.resources :comments, :only => [:new, :create]
+
   map.root :controller => 'posts', :action => 'index'
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -40,14 +44,5 @@ ActionController::Routing::Routes.draw do |map|
   #   map.namespace :admin do |admin|
   #     # Directs /admin/products/* to Admin::ProductsController (app/controllers/admin/products_controller.rb)
   #     admin.resources :products
-  #   end
-
-  # You can have the root of your site routed with map.root -- just remember to delete public/index.html.
-  # map.root :controller => "welcome"
-
-  # See how all your routes lay out with "rake routes"
-
-  # Install the default routes as the lowest priority.
-  # Note: These default routes make all actions in every controller accessible via GET requests. You should
-  # consider removing or commenting them out if you're using named routes and resources.
+  #   end  
 end

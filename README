@@ -6,8 +6,9 @@ Blogazine is a blog publishing system with a twist. It's been build from the gro
 2. Install required gems by running rake gems:install.
 3. Setup databases in config/database.yml and run rake db:create.
 4. Migrate the databases by running rake db:migrate.
-5. Fire up the server.
-6. Start publishing.
+5. Load up admin by rake db:seed.
+6. Fire up the server.
+7. Start publishing.
 
 == Under Development
 

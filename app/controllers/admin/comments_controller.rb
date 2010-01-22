@@ -1,5 +1,6 @@
 class Admin::CommentsController < ApplicationController
   layout 'admin/admin'
+  before_filter :authenticate_admin!
   
   def index
     @comments = Comment.all

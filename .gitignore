@@ -4,5 +4,6 @@ tmp/**/*
 tmp
 config/database.yml
 db/schema.rb
+db/*.sqlite3
 .sass-cache/*
 .sass-cache
