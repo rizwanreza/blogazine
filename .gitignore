@@ -8,5 +8,6 @@ db/*.sqlite3
 .sass-cache/*
 .sass-cache
 
-# This directory is where posts' stylesheets are uploaded:
+# This directory is where posts' stylesheets are uploaded and compiled:
 app/stylesheets/posts/*
+public/stylesheets/posts/*
