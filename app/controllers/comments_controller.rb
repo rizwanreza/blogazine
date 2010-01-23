@@ -12,7 +12,7 @@ class CommentsController < ApplicationController
   def create
     @comment = Comment.new(params[:comment])
     @post = Post.find(params[:comment][:post_id])
-    if @comment.save
+    if @comment.save!
       flash[:notice] = "Successfully created comment."
       redirect_to comments_slug_path(@post.slug)
     else

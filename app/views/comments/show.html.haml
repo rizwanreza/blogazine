@@ -14,9 +14,8 @@
     = link_to "Back to Article", slug_path(@post.slug)
   
     %h3#comment-head
-      = "#{@comments.size}"
-      Comments
-
+      = comments_count(@comments)
+      
     %ul#comment-list
       - @comments.each do |comment|
         %li
