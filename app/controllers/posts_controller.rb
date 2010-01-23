@@ -5,8 +5,11 @@ class PostsController < ApplicationController
   
   def show
     @post = Post.find_by_slug(params[:slug])
+    # render :text => Haml::Engine.new(@post.body, :options => {:ugly => true}).render
     @comment = Comment.new
     @comments = @post.comments
-    # render :text => Haml::Engine.new(@post.body, :options => {:ugly => true}).render
+  end
+  
+  def comments
   end
 end

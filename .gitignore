@@ -7,3 +7,6 @@ db/schema.rb
 db/*.sqlite3
 .sass-cache/*
 .sass-cache
+
+# This directory is where posts' stylesheets are uploaded:
+app/stylesheets/posts/*

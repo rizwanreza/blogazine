@@ -2,37 +2,8 @@
 %html
   %head
     %link{:href => "/stylesheets/posts/#{@post.slug}.css", :media => 'screen', :rel => 'stylesheet', :type => 'text/css'}
+
     
   %body
     = Haml::Engine.new(@post.body, :options => {:ugly => true, :format => :html5, :escape_html => true}).render
     
-    
-    - title "New Comment"
-
-    - form_for @comment do |f|
-      = f.error_messages
-      = hidden_field_tag(:post_id, @post.id)
-      %p
-        = f.label :name
-        %br
-        = f.text_field :name
-      %p
-        = f.label :email
-        %br
-        = f.text_field :email
-      %p
-        = f.label :website
-        %br
-        = f.text_field :website
-      %p
-        = f.label :body
-        %br
-        = f.text_area :body    
-      %p
-        = f.submit "Submit"
-    
-    %p= link_to "Back to List", admin_comments_path
-    
-    - @comments.each do |comment|
-      %div
-        = comment.body

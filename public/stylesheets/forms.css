@@ -1,0 +1,112 @@
+/* line 1, ../../app/stylesheets/forms.sass */
+#comment-form {
+  padding-left: 100px; }
+
+/* line 4, ../../app/stylesheets/forms.sass */
+label {
+  float: left;
+  display: inline;
+  margin-left: -100px; }
+
+/* line 9, ../../app/stylesheets/forms.sass */
+label.error {
+  float: none;
+  margin-left: 0;
+  color: red;
+  padding-left: 0.5em;
+  vertical-align: baseline; }
+
+/* line 16, ../../app/stylesheets/forms.sass */
+label.error[for="comment_body"] {
+  vertical-align: top; }
+
+/* line 19, ../../app/stylesheets/forms.sass */
+fieldset {
+  clear: both; }
+
+/* line 23, ../../app/stylesheets/forms.sass */
+legend {
+  padding: 0 0 1.286em;
+  font-size: 1.167em;
+  font-weight: 700; }
+
+/* line 28, ../../app/stylesheets/forms.sass */
+fieldset fieldset legend {
+  padding: 0 0 1.5em;
+  font-size: 1em; }
+
+/* line 33, ../../app/stylesheets/forms.sass */
+* html legend, *+html legend {
+  margin-left: -7px; }
+
+/* line 38, ../../app/stylesheets/forms.sass */
+form .field, form .buttons {
+  clear: both;
+  margin: 0 0 1.5em; }
+/* line 44, ../../app/stylesheets/forms.sass */
+form ul.fields {
+  margin: 0 0 1.5em;
+  padding: 0; }
+  /* line 48, ../../app/stylesheets/forms.sass */
+  form ul.fields li {
+    list-style-type: none;
+    margin: 0; }
+/* line 53, ../../app/stylesheets/forms.sass */
+form ul.inline li, form ul.inline label {
+  display: inline; }
+/* line 56, ../../app/stylesheets/forms.sass */
+form ul.inline li {
+  padding: 0 .75em 0 0; }
+
+/* line 61, ../../app/stylesheets/forms.sass */
+input.radio, input.checkbox {
+  vertical-align: top; }
+
+/* line 65, ../../app/stylesheets/forms.sass */
+label, button {
+  cursor: pointer; }
+
+/* line 70, ../../app/stylesheets/forms.sass */
+input.submit, input.image {
+  cursor: pointer; }
+
+/* line 75, ../../app/stylesheets/forms.sass */
+* html input.radio, * html input.checkbox {
+  vertical-align: middle; }
+
+/* line 80, ../../app/stylesheets/forms.sass */
+*+html input.radio, *+html input.checkbox {
+  vertical-align: middle; }
+
+/* line 84, ../../app/stylesheets/forms.sass */
+textarea {
+  overflow: auto; }
+
+/* line 89, ../../app/stylesheets/forms.sass */
+input[type="text"], input[type="password"] {
+  margin: 0;
+  font: 1em/1.3 Helvetica, Arial, "Liberation Sans", "Bitstream Vera Sans", sans-serif;
+  vertical-align: baseline;
+  border: 1px solid #444;
+  padding: 2px; }
+
+/* line 97, ../../app/stylesheets/forms.sass */
+textarea, select {
+  margin: 0;
+  font: 1em/1.3 Helvetica, Arial, "Liberation Sans", "Bitstream Vera Sans", sans-serif;
+  vertical-align: baseline; }
+
+/* line 102, ../../app/stylesheets/forms.sass */
+textarea {
+  border: 1px solid #444;
+  padding: 2px; }
+
+/* line 106, ../../app/stylesheets/forms.sass */
+form.horizontal .field {
+  padding-left: 150px; }
+  /* line 109, ../../app/stylesheets/forms.sass */
+  form.horizontal .field label {
+    display: inline;
+    float: left;
+    width: 140px;
+    margin-left: -150px; }

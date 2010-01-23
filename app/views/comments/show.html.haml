@@ -1,0 +1,57 @@
+!!! html
+%html
+  %head
+    = javascript_include_tag 'jquery-1.4', :cache => true
+    = javascript_include_tag 'jquery.validate.pack', :cache => true
+    = stylesheet_link_tag "forms", :cache => true
+
+    :javascript
+      $(document).ready(function(){
+        $("#commentForm").validate();
+      });
+      
+  %body
+    = link_to "Back to Article", slug_path(@post.slug)
+  
+    %h3#comment-head
+      = "#{@comments.size}"
+      Comments
+
+    %ul#comment-list
+      - @comments.each do |comment|
+        %li
+          %dl.comment
+            %dt#comment-id
+              %strong
+                = link_to comment.name, comment.website
+                says:
+                %em.comment-date
+                  December 10, 2009
+            %dd
+              .comment-avatar
+                = gravatar_for comment, :default => 'http://railsarticles.com/images/default-avatar.gif', :alt => "#{comment.name}'s Gravatar"
+          
+              .comment-message
+                %p
+                  = comment.body
+
+    %h2
+      Add a Comment
+    #comment-form
+      - form_for :comment, @comment, :url => { :action => "create" }, :html => {:id => 'commentForm'} do |f|
+        = f.error_messages
+        = hidden_field_tag(:post_id, @post.id, :name => 'comment[post_id]')
+        .field
+          = f.label :name
+          = f.text_field :name, :class => "required"
+        .field
+          = f.label :email
+          = f.text_field :email, :class => "email required"
+        .field
+          = f.label :website
+          = f.text_field :website, :class => "url"
+        .field
+          = f.label :body
+          = f.text_area :body, :class => "required" 
+        .buttons
+          = f.submit "Submit"
