@@ -55,7 +55,8 @@
 
     #second-row.wrapper
       #recent-comments
-        %h3 Recent Comments
+        %h3 
+          = @comments.size > 0 ? "Recent Comments" : "No Comments Yet"
     
         %ul
           - @comments.each do |comment|
@@ -67,22 +68,13 @@
                 = link_to comment.post.title, admin_post_path(comment.post)
               %p.small
                 = link_to comment_approved(comment), admin_comment_path(comment)
-          %li
-            %p.highlight 
-              A couple of things I think we should be deciding is the fact that there are not many people who think this is awesome. Rather this is how we should take care of it. 
-            %p.small
-              Robert, January 8 on Revamped Routes in Rails 3
-          %li
-            %p.highlight 
-              A couple of things I think we should be deciding is the fact that there are not many people who think this is awesome. Rather this is how we should take care of it. 
-            %p.small
-              Robert, January 8 on Revamped Routes in Rails 3
           
         #comments-button
-          = link_to 'All Comments', admin_comments_path
+          = link_to 'All Comments', admin_comments_path if @comments.size > 0
     
       #recent-posts
-        %h3 Recent Posts
+        %h3 
+          = @posts.size > 0 ? "Recent Posts" : "You haven&rsquo;t posted anything yet"
         %ul
           - @posts.each do |post|
             
@@ -94,15 +86,9 @@
                   = display_date post.updated_at
                 -else
                   = "NOT YET PUBLISHED"
-          %li
-            %p.highlight Revamped Routes
-            %p.small Ryan, January 9
-          %li
-            %p.highlight Revamped Routes
-            %p.small Ryan, January 9
 
         #posts-button
-          = link_to 'All Posts', admin_posts_path
+          = link_to 'All Posts', admin_posts_path if @posts.size > 0
       
     #footer.wrapper
       #navigation
