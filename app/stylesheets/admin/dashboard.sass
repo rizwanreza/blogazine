@@ -1,0 +1,322 @@
+@import blueprint/reset.sass
+@import blueprint/screen.sass
+@import blueprint/modules/utilities.sass
+@import blueprint/modules/_debug.sass
+@import compass/utilities/lists.sass
+@import compass/utilities/links.sass
+
+!blueprint_container_size = 960px
+!blueprint_grid_outer_width = 10px
+!blueprint_grid_margin = 10px
+!blueprint_grid_width = 30px
+!blueprint_grid_columns = 24
+
+!font_headings = "Helvetica Neue"
+!font_text = "Adobe Caslon Pro"
+
+=small
+  :font-size 65%
+  :font-family = !font_text
+  :text-transform uppercase
+  :letter-spacing 1px
+  
+
+=panel
+  :border-bottom 1px solid #333
+
+=highlighted-text
+  :font-style italic
+  :font-size 130%
+
+// 
+  Gray
+    #222
+    #111
+
+  Green
+    #91bd09
+    #749a02
+  Blue
+    #2daebf
+    #007d9a
+
+  Red
+    #e33100
+    #872300
+  Magenta
+    #a9014b
+    #630030
+
+  Orange
+    #ff5c00
+    #d45500
+
+  Yellow
+    #ffb515
+    #fc9200
+
+=awesome-button( !color, !color_hover )
+  :background = !color url(/images/36px-blended.png) repeat-x
+  display: inline-block
+  padding: 5px 10px 6px
+  color: #fff
+  text-decoration: none
+  -moz-border-radius: 18px
+  -webkit-border-radius: 18px
+  -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5)
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5)
+  text-shadow: 0 -1px 1px rgba(0,0,0,0.25)
+  border-bottom: 1px solid rgba(0,0,0,0.25)
+  position: relative
+  cursor: pointer
+  font-weight: bold
+  font-size: 13px
+  line-height: 1
+  :background-position-x 0px
+  :background-position-y 0px
+  :font-family = !font_headings
+  
+  
+  
+  &:hover
+    :background-color = !color_hover
+    color: #fff
+
+  &:active
+    top: 1px
+
+=large-awesome
+  font-size: 14px
+  :padding 8px 14px 9px
+
+=small-awesome
+  font-size: 11px
+
+=super
+  background-image: url(/images/36px-blended.png)
+  padding: 4px 14px 6px
+  border: 1px solid rgba(0,0,0,.25)
+  border-bottom-color: rgba(0,0,0,.35)
+  -webkit-border-radius: 15px
+  -moz-border-radius: 15px
+  background-position: 0 0
+  padding: 6px 17px 8px
+  -webkit-border-radius: 18px
+  -moz-border-radius: 18px
+
+.hovering
+  display: block !important
+
+//div#content .column-row
+  .super.button
+    background-image: url(/images/gradients/36px-blended.png)
+    padding: 4px 14px 6px
+    border: 1px solid rgba(0,0,0,.25)
+    border-bottom-color: rgba(0,0,0,.35)
+    -webkit-border-radius: 15px
+    -moz-border-radius: 15px
+
+  .small.super.button
+    font-size: 11px
+    -webkit-border-radius: 12px
+    -moz-border-radius: 12px
+
+  .large.super.button
+    background-position: 0 0
+    padding: 6px 17px 8px
+    -webkit-border-radius: 18px
+    -moz-border-radius: 18px
+
+  .secondary.button
+    background-color: #fff
+
+    &:hover
+      background-color: #eee
+
+
++blueprint-debug
+
+a
+  +hover-link
+  +link-colors(#333, #000, #666, #666)
+
+h1, h2, h3
+  :font-family = !font_headings
+
+h1
+  :font-size 300%
+  :font-weight 900
+
+h2
+  :font-size 200%
+
+h3
+  :font-size 170%
+  
+p
+  :margin-bottom 16px
+
+p.highlight
+  +highlighted-text
+  :margin-bottom 8px
+p.small
+  +small
+
+
+body 
+  :font-family = !font_text
+
+.wrapper
+  +container
+  
+#header
+  background: #e5e5e5
+  #subnav
+    +column(24,"last")
+    ul
+      +horizontal-list
+      :font-size 75%
+      :height 36px
+      
+      li
+        margin-top: 10px
+        a
+          padding: 4px 10px
+          :font-family = !font_headings
+          font-weight: bold
+          text-decoration: none
+          color: #888
+          -webkit-border-radius: 15px
+          -moz-border-radius: 15px
+          border-radius: 15px
+          
+          &:hover
+            background: #aaa
+            color: white
+            text-shadow: #555 0 1px 0
+            
+          &:active
+            background: #555
+            padding: 3px 10px 4px
+            
+      li.dropdown
+        background: #aaa
+        :display none
+        -webkit-border-radius: 4px
+
+        :display relative
+        div
+          :display none
+          :position absolute
+          :background #ccc
+          width: 200px
+          top: 25px
+          margin-left: -5px
+          :padding 10px
+          -webkit-border-bottom-left-radius: 4px
+          -webkit-border-bottom-right-radius: 4px
+          :z-index 1
+        &.active
+          :background #ccc
+          -webkit-border-bottom-left-radius: 0
+          -webkit-border-bottom-right-radius: 0
+
+#first-row
+  margin-top: 16px
+  h1
+    +column(20)
+    :margin-bottom 32px
+  #new-post-button
+    +column(4, "last")
+    :padding-top 16px
+    :text-align right
+    a
+      +awesome-button( "#fff", "#eee" )
+      +super
+      :color rgb(68, 68, 68)
+      :text-shadow none
+      :-webkit-box-shadow rgba(0, 0, 0, 0.0976562) 0px 1px 3px
+      :-moz-box-shadow rgba(0, 0, 0, 0.0976562) 0px 1px 3px
+      :box-shadow rgba(0, 0, 0, 0.0976562) 0px 1px 3px
+      &:hover
+        :color rgb(68, 68, 68)
+        
+#second-row
+  #recent-comments
+    +column(14)
+    ul
+      +no-bullets
+      
+      li
+        :border-bottom 1px solid #eee
+        :padding-top 16px
+        &:last-child
+          :border-bottom none
+        
+        span.warning
+          color: maroon
+    h3
+      +small
+      +panel
+    
+    #comments-button
+      :text-align right
+      :margin-bottom 10px
+      a
+        +awesome-button( "#fff", "#eee" )
+        +super
+        :color rgb(68, 68, 68)
+        :text-shadow none
+        :-webkit-box-shadow rgba(0, 0, 0, 0.0976562) 0px 1px 3px
+        :-moz-box-shadow rgba(0, 0, 0, 0.0976562) 0px 1px 3px
+        :box-shadow rgba(0, 0, 0, 0.0976562) 0px 1px 3px
+        &:hover
+          :color rgb(68, 68, 68)
+    
+  #recent-posts
+    +column(10, "last")
+    ul
+      +no-bullets
+      li
+        :border-bottom 1px solid #eee
+        :padding-top 16px
+        &:last-child
+          :border-bottom none
+    h3
+      +small
+      +panel
+    #posts-button
+      :text-align right
+      :margin-bottom 10px
+      a
+        +awesome-button( "#fff", "#eee" )
+        +super
+        :color rgb(68, 68, 68)
+        :text-shadow none
+        :-webkit-box-shadow rgba(0, 0, 0, 0.0976562) 0px 1px 3px
+        :-moz-box-shadow rgba(0, 0, 0, 0.0976562) 0px 1px 3px
+        :box-shadow rgba(0, 0, 0, 0.0976562) 0px 1px 3px
+        &:hover
+          :color rgb(68, 68, 68)
+      
+#footer
+  margin-top: 48px
+  :border-top 1px solid #bbb
+
+  #navigation
+    +column(14)
+    padding-top: 16px
+    ul
+      +horizontal-list("10px")
+      li
+        &:hover
+        a
+          :font-family = !font_text
+          +small
+          :color #333
+  #copy
+    +column(10,"last")
+    padding-top: 16px
+    +small
+    :color #777
+    p

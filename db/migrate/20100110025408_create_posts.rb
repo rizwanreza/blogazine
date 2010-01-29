@@ -4,6 +4,8 @@ class CreatePosts < ActiveRecord::Migration
       t.string :title
       t.string :slug
       
+      t.string :author
+      
       t.text :summary
       t.text :body
       

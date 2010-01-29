@@ -9,4 +9,5 @@ class Post < ActiveRecord::Base
 
   named_scope :published, :conditions => { :published => true }
   
+  named_scope :recent, :limit => 5, :order => "created_at DESC"
 end

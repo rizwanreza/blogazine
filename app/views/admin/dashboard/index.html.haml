@@ -1,0 +1,119 @@
+!!!
+
+%html{html_attrs(lang = 'en-US')}
+  %head
+    %title 
+      Admin Area - Blogazine
+    
+    %meta{"http-equiv" => "Content-Type", :content => "text/html; charset=utf-8"}/
+    %meta{:name => "description", :content => "A Design and Development blog of Rizwan Reza."}/
+    %meta{:name => "keywords", :content => "design, development, blog, interaction design, ruby, rails, rizwan, reza"}/
+    %meta{:name => "author", :content => "Rizwan Reza"}/
+    
+    = stylesheet_link_tag "admin/dashboard", :media => "screen, projection"
+
+    = auto_discovery_link_tag(:atom, "http://feeds.feedburner.com/rizwanreza")
+    %link{:rel => "shortcut icon", :href => '/favicon.ico', :type => 'image/x-icon'}
+    
+    = javascript_include_tag "jquery-1.4"
+    = javascript_include_tag "admin"
+    
+
+  %body
+    #header
+      .wrapper
+        #subnav
+          %ul
+            %li
+              = link_to "Dashboard", admin_comments_path
+            %li
+              = link_to "Comments", admin_comments_path
+            %li
+              = link_to "Posts", admin_posts_path
+            %li
+              = link_to "Settings", admin_posts_path
+            %li
+              = link_to "Users", admin_posts_path
+            %li
+              = link_to "Twitter", admin_posts_path
+            %li
+              = link_to "Logout", admin_posts_path
+              
+            %li.dropdown
+              %a{ :href => "#", :class => "nav" }
+                Go to &or;
+              %div#something
+                %h3 Settings
+                %h3 Settings
+                %h3 Settings
+                %h3 Settings
+      
+    #first-row.wrapper
+      %h1 Dashboard
+      #new-post-button
+        = link_to 'Add New Post', new_admin_post_path
+
+    #second-row.wrapper
+      #recent-comments
+        %h3 Recent Comments
+    
+        %ul
+          - @comments.each do |comment|
+            %li
+              %p.highlight 
+                = truncate(comment.body, :omission => "&hellip;", :length => 200)
+              %p.small
+                = "By #{comment.name}, #{display_date comment.created_at} on"
+                = link_to comment.post.title, admin_post_path(comment.post)
+              %p.small
+                = link_to comment_approved(comment), admin_comment_path(comment)
+          %li
+            %p.highlight 
+              A couple of things I think we should be deciding is the fact that there are not many people who think this is awesome. Rather this is how we should take care of it. 
+            %p.small
+              Robert, January 8 on Revamped Routes in Rails 3
+          %li
+            %p.highlight 
+              A couple of things I think we should be deciding is the fact that there are not many people who think this is awesome. Rather this is how we should take care of it. 
+            %p.small
+              Robert, January 8 on Revamped Routes in Rails 3
+          
+        #comments-button
+          = link_to 'All Comments', admin_comments_path
+    
+      #recent-posts
+        %h3 Recent Posts
+        %ul
+          - @posts.each do |post|
+            
+            %li
+              %p.highlight 
+                = link_to post.title, admin_post_path(post)
+              %p.small
+                - if post.published?
+                  = display_date post.updated_at
+                -else
+                  = "NOT YET PUBLISHED"
+          %li
+            %p.highlight Revamped Routes
+            %p.small Ryan, January 9
+          %li
+            %p.highlight Revamped Routes
+            %p.small Ryan, January 9
+
+        #posts-button
+          = link_to 'All Posts', admin_posts_path
+      
+    #footer.wrapper
+      #navigation
+        %ul
+          %li
+            = link_to "Comments", admin_comments_path
+          %li
+            = link_to "Posts", admin_posts_path
+          %li
+            = link_to "Images", admin_posts_path
+          %li
+            = link_to "View Site", root_path
+      #copy
+        %p This web application is crafted by Rizwan Reza.
