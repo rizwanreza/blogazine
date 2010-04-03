@@ -1,0 +1,168 @@
+@import compass/reset.sass
+@import blueprint/screen.sass
+@import blueprint/modules/utilities.sass
+@import blueprint/modules/_debug.sass
+@import compass/utilities/lists.sass
+@import compass/utilities/links.sass
+@import partials/vars.sass
+@import partials/mixins.sass
+
+@import dashboard.sass
+@import post.sass
+@import posts.sass
+@import comments.sass
+@import form.sass
+
+.hovering
+  display: block !important
+
++blueprint-debug
+
+a
+  +hover-link
+  +link-colors(#333, #000, #666, #666)
+
+h1, h2, h3
+  :font-family = !font_headings
+
+h1
+  :font-size 300%
+  :font-weight 900
+
+h2
+  :font-size 200%
+
+h3
+  :font-size 170%
+  
+p
+  :margin-bottom 16px
+
+p.highlight
+  +highlighted-text
+  :margin-bottom 8px
+p.small
+  +small
+
+
+body 
+  :font-family = !font_text
+
+.wrapper
+  +container
+  
+#header
+  background: #e5e5e5
+  #subnav
+    +column(24,"last")
+    ul
+      +horizontal-list
+      :font-size 75%
+      :height 36px
+      
+      li
+        margin-top: 10px
+        a
+          padding: 4px 10px
+          :font-family = !font_headings
+          font-weight: bold
+          text-decoration: none
+          color: #888
+          -webkit-border-radius: 15px
+          -moz-border-radius: 15px
+          border-radius: 15px
+          
+          &:hover
+            background: #aaa
+            color: white
+            text-shadow: #555 0 1px 0
+            
+          &:active
+            background: #555
+            padding: 3px 10px 4px
+        
+        &#flash
+          float: right
+        
+          div
+            text-align: right
+            :font-family = !font_headings
+            font-weight: bold
+        
+        #flash-notice
+          color: black
+        
+        #flash-success
+          color: green
+          
+
+
+#first-row
+  margin-top: 16px
+  h1
+    +column(16)
+    :margin-bottom 32px
+  #buttons
+    +column(8, "last")
+    :padding-top 16px
+    :text-align right
+    a#new-post-button
+      +awesome-button( "#fff", "#eee" )
+      +super
+      :color rgb(68, 68, 68)
+      :text-shadow none
+      :-webkit-box-shadow rgba(0, 0, 0, 0.0976562) 0px 1px 3px
+      :-moz-box-shadow rgba(0, 0, 0, 0.0976562) 0px 1px 3px
+      :box-shadow rgba(0, 0, 0, 0.0976562) 0px 1px 3px
+      &:hover
+        :color rgb(68, 68, 68)
+    a#moderate-button
+      margin-right: 10px
+      +awesome-button("#e33100", "#872300")
+      +super
+    
+    a#edit-button
+      +awesome-button( "#fff", "#eee" )
+      +super
+      :color rgb(68, 68, 68)
+      :text-shadow none
+      :-webkit-box-shadow rgba(0, 0, 0, 0.0976562) 0px 1px 3px
+      :-moz-box-shadow rgba(0, 0, 0, 0.0976562) 0px 1px 3px
+      :box-shadow rgba(0, 0, 0, 0.0976562) 0px 1px 3px
+      :margin-right 10px
+      &:hover
+        :color rgb(68, 68, 68)
+
+    a#publish-button    
+      +awesome-button( "#29BF26", "#009A02" )
+      +super
+      
+    a#delete-button, a#unpublish-button
+      +awesome-button("#e33100", "#872300")
+      +super
+      :margin-right 10px
+    
+
+
+
+#footer
+  margin-top: 48px
+  :border-top 1px solid #bbb
+
+  #navigation
+    +column(14)
+    padding-top: 16px
+    ul
+      +horizontal-list("10px")
+      li
+        &:hover
+        a
+          :font-family = !font_text
+          +small
+          :color #333
+  #copy
+    +column(10,"last")
+    padding-top: 16px
+    +small
+    :color #777
+    p

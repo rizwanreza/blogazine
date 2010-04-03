@@ -1,0 +1,89 @@
+=small
+  :font-size 65%
+  :font-family = !font_text
+  :text-transform uppercase
+  :letter-spacing 1px
+  
+
+=panel
+  :border-bottom 1px solid #333
+
+=highlighted-text
+  :font-style italic
+  :font-size 130%
+
+// 
+  Gray
+    #222
+    #111
+
+  Green
+    #91bd09
+    #749a02
+  Blue
+    #2daebf
+    #007d9a
+
+  Red
+    #e33100
+    #872300
+  Magenta
+    #a9014b
+    #630030
+
+  Orange
+    #ff5c00
+    #d45500
+
+  Yellow
+    #ffb515
+    #fc9200
+
+=awesome-button( !color, !color_hover )
+  :background = !color url(/images/36px-blended.png) repeat-x
+  display: inline-block
+  padding: 5px 10px 6px
+  color: #fff
+  text-decoration: none
+  -moz-border-radius: 18px
+  -webkit-border-radius: 18px
+  -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5)
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5)
+  text-shadow: 0 -1px 1px rgba(0,0,0,0.25)
+  border-bottom: 1px solid rgba(0,0,0,0.25)
+  position: relative
+  cursor: pointer
+  font-weight: bold
+  font-size: 13px
+  line-height: 1
+  :background-position-x 0px
+  :background-position-y 0px
+  :font-family = !font_headings
+  
+  
+  
+  &:hover
+    :background-color = !color_hover
+    color: #fff
+
+  &:active
+    top: 1px
+
+=large-awesome
+  font-size: 14px
+  :padding 8px 14px 9px
+
+=small-awesome
+  font-size: 11px
+
+=super
+  background-image: url(/images/36px-blended.png)
+  padding: 4px 14px 6px
+  border: 1px solid rgba(0,0,0,.25)
+  border-bottom-color: rgba(0,0,0,.35)
+  -webkit-border-radius: 15px
+  -moz-border-radius: 15px
+  background-position: 0 0
+  padding: 6px 17px 8px
+  -webkit-border-radius: 18px
+  -moz-border-radius: 18px

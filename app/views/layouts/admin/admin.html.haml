@@ -1,21 +1,61 @@
-!!! Strict
-%html{html_attrs}
-  
+!!! 5
+%html{html_attrs(lang = 'en-US')}
   %head
-    %title
+    %title 
+      Admin Area - Blogazine
       = h(yield(:title) || "Untitled")
-    %meta{"http-equiv"=>"Content-Type", :content=>"text/html; charset=utf-8"}/
-    = stylesheet_link_tag 'application'
-    = stylesheet_link_tag "formtastic"
-
-    = yield(:head)
-  
+    %meta{"http-equiv" => "Content-Type", :content => "text/html; charset=utf-8"}/
+    %link{:rel => "shortcut icon", :href => '/favicon.ico', :type => 'image/x-icon'}    
+    = stylesheet_link_tag "admin/admin", :media => "screen, projection"
   %body
-    #container
-      - flash.each do |name, msg|
-        = content_tag :div, msg, :id => "flash_#{name}"
-      
-      - if show_title?
-        %h1=h yield(:title)
+    #header
+      .wrapper
+        #subnav
+          %ul
+            %li
+              = link_to "Dashboard", admin_path
+            %li
+              = link_to "Comments", admin_comments_path
+            %li
+              = link_to "Posts", admin_posts_path
+            %li
+              = link_to "Settings", admin_posts_path
+            %li
+              = link_to "Users", admin_posts_path
+            %li
+              = link_to "Twitter", admin_posts_path
+            %li
+              = link_to "Logout", admin_posts_path
+            %li#flash
+              - flash.each do |name, msg|
+                = content_tag :div, msg, :id => "flash-#{name}"
+                
+
+    #first-row.wrapper
+
+      %h1
+        - if show_title?
+          =h yield(:title)
+      #buttons
+        = yield(:buttons)
+        
+    #second-row.wrapper
       
       = yield
+
+    #footer.wrapper
+      #navigation
+        %ul
+          %li
+            = link_to "Comments", admin_comments_path
+          %li
+            = link_to "Posts", admin_posts_path
+          %li
+            = link_to "Images", admin_posts_path
+          %li
+            = link_to "View Site", root_path
+      #copy
+        %p This web application is crafted by Rizwan Reza.
+
+    = javascript_include_tag "jquery-1.4"
+    = javascript_include_tag "admin"

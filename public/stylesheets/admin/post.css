@@ -1,20 +1,22 @@
 /*
 Sass::SyntaxError: Undefined mixin 'column'.
-on line 3 of /Users/rizwanreza/code/active/blogazine/app/stylesheets/admin/dashboard.sass
+on line 9 of /Users/rizwanreza/code/active/blogazine/app/stylesheets/admin/post.sass
 
-1: #second-row
-2:   #recent-comments
-3:     +column(14)
-4:     ul
-5:       +no-bullets
-6:       
-7:       li
-8:         :border-bottom 1px solid #eee
-9:         :padding-top 16px
+5:     margin-top: 0
+6: 
+7: #second-row
+8:   #post
+9:     +column(17)
+10:     & > p.highlight
+11:       :padding-top 14px
+12:     h3
+13:       +small
+14:       +panel
+15:     ul#comments
 
 
 Backtrace:
-/Users/rizwanreza/code/active/blogazine/app/stylesheets/admin/dashboard.sass:3
+/Users/rizwanreza/code/active/blogazine/app/stylesheets/admin/post.sass:9
 /usr/local/lib/ruby/gems/1.8/gems/haml-2.2.16/lib/sass/tree/mixin_node.rb:27:in `_perform'
 /usr/local/lib/ruby/gems/1.8/gems/haml-2.2.16/lib/sass/tree/node.rb:158:in `perform'
 /usr/local/lib/ruby/gems/1.8/gems/haml-2.2.16/lib/sass/tree/node.rb:202:in `perform_children'
@@ -47,10 +49,8 @@ Backtrace:
 /usr/local/lib/ruby/gems/1.8/gems/haml-2.2.16/lib/sass/plugin.rb:62:in `check_for_updates'
 /usr/local/lib/ruby/gems/1.8/gems/haml-2.2.16/lib/sass/plugin/rails.rb:18:in `process_without_compass'
 /usr/local/lib/ruby/gems/1.8/gems/compass-0.8.17/lib/compass/app_integration/rails/action_controller.rb:7:in `process'
-/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
-/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
-/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
-/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:65:in `call_with_exception'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:90:in `dispatch'
 /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
 /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
 /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
@@ -101,4 +101,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Sass::SyntaxError: Undefined mixin 'column'.\A on line 3 of /Users/rizwanreza/code/active/blogazine/app/stylesheets/admin/dashboard.sass\A \A 1: #second-row\A 2:   #recent-comments\A 3:     +column(14)\A 4:     ul\A 5:       +no-bullets\A 6:       \A 7:       li\A 8:         :border-bottom 1px solid #eee\A 9:         :padding-top 16px\A "; }
+  content: "Sass::SyntaxError: Undefined mixin 'column'.\A on line 9 of /Users/rizwanreza/code/active/blogazine/app/stylesheets/admin/post.sass\A \A 5:     margin-top: 0\A 6: \A 7: #second-row\A 8:   #post\A 9:     +column(17)\A 10:     & > p.highlight\A 11:       :padding-top 14px\A 12:     h3\A 13:       +small\A 14:       +panel\A 15:     ul#comments\A "; }

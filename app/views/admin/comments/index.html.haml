@@ -1,19 +1,23 @@
 - title "Comments"
 
-%table
-  %tr
-    %th Name
-    %th Email
-    %th Website
-    %th Body
-    %th Moderated
-  - for comment in @comments
-    %tr
-      %td= h comment.name
-      %td= h comment.email
-      %td= h comment.website
-      %td= h comment.body
-      %td= h comment.moderated
-      %td= link_to 'Show', admin_comment_path(comment)
-      %td= link_to 'Edit', edit_admin_comment_path(comment)
-      %td= link_to 'Destroy', admin_comment_path(comment), :confirm => 'Are you sure?', :method => :delete
+- @comments.each do |comment|
+  %h3.comments
+    About 
+    = comment.post.title
+  
+  %div{:id => "comment-#{comment.id}", :class => "comment-body"}
+    %p.highlight
+      = comment.body
+    %p.small
+      By
+      = link_to comment.name, "mailto:#{comment.email}"
+      of
+      = link_to comment.website, comment.website, :target => "_blank"
+      on
+      = display_date comment.created_at
+      = link_to 'Edit', edit_admin_comment_path(comment)
+      = link_to 'Destroy', admin_comment_path(comment), :confirm => 'Are you sure?', :method => :delete
+      
+  %div{:class => "comment-actions"}
+    %p
+      = link_to 'Approve', admin_comment_path(comment)

@@ -1,20 +1,20 @@
 /*
-Sass::SyntaxError: Undefined mixin 'column'.
-on line 3 of /Users/rizwanreza/code/active/blogazine/app/stylesheets/admin/dashboard.sass
+Sass::SyntaxError: Undefined mixin 'small'.
+on line 3 of /Users/rizwanreza/code/active/blogazine/app/stylesheets/admin/posts.sass
 
-1: #second-row
-2:   #recent-comments
-3:     +column(14)
-4:     ul
-5:       +no-bullets
-6:       
-7:       li
-8:         :border-bottom 1px solid #eee
-9:         :padding-top 16px
+1: #posts
+2:   h3
+3:     +small
+4:     +panel
+5:   
+6:   ul
+7:     width: 100%
+8:     +no-bullets
+9:     li
 
 
 Backtrace:
-/Users/rizwanreza/code/active/blogazine/app/stylesheets/admin/dashboard.sass:3
+/Users/rizwanreza/code/active/blogazine/app/stylesheets/admin/posts.sass:3
 /usr/local/lib/ruby/gems/1.8/gems/haml-2.2.16/lib/sass/tree/mixin_node.rb:27:in `_perform'
 /usr/local/lib/ruby/gems/1.8/gems/haml-2.2.16/lib/sass/tree/node.rb:158:in `perform'
 /usr/local/lib/ruby/gems/1.8/gems/haml-2.2.16/lib/sass/tree/node.rb:202:in `perform_children'
@@ -101,4 +101,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Sass::SyntaxError: Undefined mixin 'column'.\A on line 3 of /Users/rizwanreza/code/active/blogazine/app/stylesheets/admin/dashboard.sass\A \A 1: #second-row\A 2:   #recent-comments\A 3:     +column(14)\A 4:     ul\A 5:       +no-bullets\A 6:       \A 7:       li\A 8:         :border-bottom 1px solid #eee\A 9:         :padding-top 16px\A "; }
+  content: "Sass::SyntaxError: Undefined mixin 'small'.\A on line 3 of /Users/rizwanreza/code/active/blogazine/app/stylesheets/admin/posts.sass\A \A 1: #posts\A 2:   h3\A 3:     +small\A 4:     +panel\A 5:   \A 6:   ul\A 7:     width: 100%\A 8:     +no-bullets\A 9:     li\A "; }

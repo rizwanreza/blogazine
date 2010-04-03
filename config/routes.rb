@@ -3,10 +3,10 @@ ActionController::Routing::Routes.draw do |map|
 
   map.namespace :admin do |admin|
     admin.resources :posts
-    admin.resources :comments, :only => [:index, :show, :update, :edit, :destroy]
+    admin.resources :comments, :only => [:index, :update, :edit, :destroy]
   end
 
-  map.connect 'admin', :controller => 'admin/dashboard', :action => 'index'
+  map.admin 'admin', :controller => 'admin/dashboard', :action => 'index'
   map.resources :comments, :only => [:new, :create]
   
   map.comments_slug '/comments/:slug', :controller => 'comments', :action => 'show'

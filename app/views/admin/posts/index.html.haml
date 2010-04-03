@@ -1,21 +1,22 @@
 - title "Posts"
 
-%table
-  %tr
-    %th Title
-    %th Slug
-    %th Summary
-    %th Sass
-    %th Published
-  - for post in @posts
-    %tr
-      %td= h post.title
-      %td= h post.slug
-      %td= h post.summary
-      %td= h post.sass
-      %td= h post.published
-      %td= link_to 'Show', admin_post_path(post)
-      %td= link_to 'Edit', edit_admin_post_path(post)
-      %td= link_to 'Destroy', admin_post_path(post), :confirm => 'Are you sure?', :method => :delete
+- content_for(:buttons) do
+  = link_to 'Add New Post', new_admin_post_path, :id => 'new-post-button'
 
-%p= link_to "New Post", new_admin_post_path
+#posts
+  %h3
+    All Posts
+  
+  %ul
+    - @posts.each do |post|
+      %li
+        %p.highlight
+          =link_to post.title, admin_post_path(post)
+        %p.small
+          By
+          =h post.author
+          on
+          =h display_date post.created_at
+          with
+          =h post.comments.size
+          = post.comments.size != 1 ? "Comments" : "Comment"

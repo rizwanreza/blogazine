@@ -1,20 +1,28 @@
+h3
+  margin-top: 32px
+  
+  &:first-child
+    margin-top: 0
+
 #second-row
-  #recent-comments
-    +column(14)
-    ul
+  #post
+    +column(17)
+    & > p.highlight
+      :padding-top 14px
+    h3
+      +small
+      +panel
+    ul#comments
       +no-bullets
-      
       li
         :border-bottom 1px solid #eee
         :padding-top 16px
         &:last-child
           :border-bottom none
-        
+
         span.warning
           color: maroon
-    h3
-      +small
-      +panel
+
     
     #comments-button
       :text-align right
@@ -30,28 +38,21 @@
         &:hover
           :color rgb(68, 68, 68)
     
-  #recent-posts
-    +column(10, "last")
+  #post-info
+    +column(7, "last")
+    :color #666
+    font-size: 100%
+    h3
+      +small
+
+      :border-bottom 1px solid #bbb
+
     ul
       +no-bullets
       li
-        :border-bottom 1px solid #eee
         :padding-top 16px
-        &:last-child
-          :border-bottom none
-    h3
-      +small
-      +panel
-    #posts-button
-      :text-align right
-      :margin-bottom 10px
-      a
-        +awesome-button( "#fff", "#eee" )
-        +super
-        :color rgb(68, 68, 68)
-        :text-shadow none
-        :-webkit-box-shadow rgba(0, 0, 0, 0.0976562) 0px 1px 3px
-        :-moz-box-shadow rgba(0, 0, 0, 0.0976562) 0px 1px 3px
-        :box-shadow rgba(0, 0, 0, 0.0976562) 0px 1px 3px
-        &:hover
-          :color rgb(68, 68, 68)
+        
+        &#author
+          span
+            text-transform: none
+            color: black

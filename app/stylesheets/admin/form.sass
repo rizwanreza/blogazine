@@ -1,0 +1,77 @@
+@import forms.sass
+
+#post_summary
+  width: 90%
+  height: 186px
+
+#post_body
+  width: 90%
+  height: 600px
+  background: #333
+  font: normal normal 100% Monaco, Menlo, monospace
+  color: #fff
+  
+.buttons
+  padding-left: 150px
+  a
+    :font-family = !font_headings
+    :font-size 80%
+
+label:hover
+  text-decoration: underline
+
+#post_submit
+  :border none
+  +awesome-button("#333", "#222")
+  +super
+  
+#post_reset
+  :border none
+  :background transparent
+  :font-family = !font_headings
+  :font-size 100%
+  &:hover
+    text-decoration: underline
+    :cursor pointer 
+
+.fieldWithErrors
+  :display inline
+  
+  input
+    :border 1px solid #CF0000
+
+#errorExplanation
+  :width 400px
+  :border 2px solid #CF0000
+  :padding 0
+  :margin-left 150px
+  :padding-bottom 12px
+  :margin-bottom 36px
+  :background-color #f0f0f0
+  h2
+    :text-align left
+    :padding 5px 5px 5px 8px
+    :margin 0
+    :font
+      :family = !font_headings
+      :weight bold
+      :size 12px
+    :background-color #c00
+    :color #fff
+  p
+    :font-family = !font_headings
+    :color #333
+    :margin-bottom 0
+    :padding 8px
+    :font-size 80%
+  ul
+    :margin 2px 24px
+    li
+      :font-family = !font_headings
+      :padding-bottom 16px
+      :font-size 12px
+      :list-style none
+      :font-weight bold
+      
+      &:last-child
+        :padding-bottom 0

@@ -1,105 +1,42 @@
-!!!
+- title "Dashboard"
 
-%html{html_attrs(lang = 'en-US')}
-  %head
-    %title 
-      Admin Area - Blogazine
-    
-    %meta{"http-equiv" => "Content-Type", :content => "text/html; charset=utf-8"}/
-    %meta{:name => "description", :content => "A Design and Development blog of Rizwan Reza."}/
-    %meta{:name => "keywords", :content => "design, development, blog, interaction design, ruby, rails, rizwan, reza"}/
-    %meta{:name => "author", :content => "Rizwan Reza"}/
-    
-    = stylesheet_link_tag "admin/dashboard", :media => "screen, projection"
+- content_for(:buttons) do
+  = link_to 'Moderate Comments', new_admin_post_path, :id => 'moderate-button'
+  = link_to 'Add New Post', new_admin_post_path, :id => 'new-post-button'
+  
 
-    = auto_discovery_link_tag(:atom, "http://feeds.feedburner.com/rizwanreza")
-    %link{:rel => "shortcut icon", :href => '/favicon.ico', :type => 'image/x-icon'}
-    
-    = javascript_include_tag "jquery-1.4"
-    = javascript_include_tag "admin"
-    
+#recent-comments
+  %h3 
+    = @comments.size > 0 ? "Recent Comments" : "No Comments Yet"
 
-  %body
-    #header
-      .wrapper
-        #subnav
-          %ul
-            %li
-              = link_to "Dashboard", admin_comments_path
-            %li
-              = link_to "Comments", admin_comments_path
-            %li
-              = link_to "Posts", admin_posts_path
-            %li
-              = link_to "Settings", admin_posts_path
-            %li
-              = link_to "Users", admin_posts_path
-            %li
-              = link_to "Twitter", admin_posts_path
-            %li
-              = link_to "Logout", admin_posts_path
-              
-            %li.dropdown
-              %a{ :href => "#", :class => "nav" }
-                Go to &or;
-              %div#something
-                %h3 Settings
-                %h3 Settings
-                %h3 Settings
-                %h3 Settings
+  %ul
+    - @comments.each do |comment|
+      %li
+        %p.highlight 
+          = truncate(comment.body, :omission => "&hellip;", :length => 200)
+        %p.small
+          = "By #{comment.name}, #{display_date comment.created_at} on"
+          = link_to comment.post.title, admin_post_path(comment.post)
+        %p.small
+          = link_to comment_approved(comment), admin_comment_path(comment)
+    
+  #comments-button
+    = link_to 'All Comments', admin_comments_path if @comments.size > 0
+
+#recent-posts
+  %h3 
+    = @posts.size > 0 ? "Recent Posts" : "You haven&rsquo;t posted anything yet"
+  %ul
+    - @posts.each do |post|
       
-    #first-row.wrapper
-      %h1 Dashboard
-      #new-post-button
-        = link_to 'Add New Post', new_admin_post_path
+      %li
+        %p.highlight 
+          = link_to post.title, admin_post_path(post)
+        %p.small
+          - if post.published?
+            = display_date post.updated_at
+          -else
+            = "NOT YET PUBLISHED"
 
-    #second-row.wrapper
-      #recent-comments
-        %h3 
-          = @comments.size > 0 ? "Recent Comments" : "No Comments Yet"
-    
-        %ul
-          - @comments.each do |comment|
-            %li
-              %p.highlight 
-                = truncate(comment.body, :omission => "&hellip;", :length => 200)
-              %p.small
-                = "By #{comment.name}, #{display_date comment.created_at} on"
-                = link_to comment.post.title, admin_post_path(comment.post)
-              %p.small
-                = link_to comment_approved(comment), admin_comment_path(comment)
-          
-        #comments-button
-          = link_to 'All Comments', admin_comments_path if @comments.size > 0
-    
-      #recent-posts
-        %h3 
-          = @posts.size > 0 ? "Recent Posts" : "You haven&rsquo;t posted anything yet"
-        %ul
-          - @posts.each do |post|
-            
-            %li
-              %p.highlight 
-                = link_to post.title, admin_post_path(post)
-              %p.small
-                - if post.published?
-                  = display_date post.updated_at
-                -else
-                  = "NOT YET PUBLISHED"
-
-        #posts-button
-          = link_to 'All Posts', admin_posts_path if @posts.size > 0
-      
-    #footer.wrapper
-      #navigation
-        %ul
-          %li
-            = link_to "Comments", admin_comments_path
-          %li
-            = link_to "Posts", admin_posts_path
-          %li
-            = link_to "Images", admin_posts_path
-          %li
-            = link_to "View Site", root_path
-      #copy
-        %p This web application is crafted by Rizwan Reza.
+  #posts-button
+    = link_to 'All Posts', admin_posts_path if @posts.size > 0

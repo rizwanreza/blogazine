@@ -1,88 +1,18 @@
-/* line 4, ../../../../../../../usr/local/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_reset.sass */
-html, body {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-weight: inherit;
-  font-style: inherit;
-  font-size: 100%;
-  font-family: inherit;
-  vertical-align: baseline; }
-
-/* line 12, ../../../../../../../usr/local/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_reset.sass */
-div, span, object, iframe, h1, h2, h3, h4, h5, h6, p,
-pre, a, abbr, acronym, address, code, del, dfn, em, img,
-dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, tbody, tfoot, thead, tr {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-weight: inherit;
-  font-style: inherit;
-  font-size: 100%;
-  font-family: inherit;
-  vertical-align: baseline; }
-
-/* line 16, ../../../../../../../usr/local/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_reset.sass */
-blockquote, q {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-weight: inherit;
-  font-style: inherit;
-  font-size: 100%;
-  font-family: inherit;
-  vertical-align: baseline;
-  quotes: "" ""; }
-  /* line 42, ../../../../../../../usr/local/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_reset.sass */
-  blockquote:before, q:before,
-  blockquote:after, q:after {
-    content: ""; }
-
-/* line 18, ../../../../../../../usr/local/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_reset.sass */
-th, td, caption {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-weight: inherit;
-  font-style: inherit;
-  font-size: 100%;
-  font-family: inherit;
-  vertical-align: baseline;
-  text-align: left;
-  font-weight: normal;
-  vertical-align: middle; }
-
-/* line 20, ../../../../../../../usr/local/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_reset.sass */
-table {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-weight: inherit;
-  font-style: inherit;
-  font-size: 100%;
-  font-family: inherit;
-  vertical-align: baseline;
-  border-collapse: separate;
-  border-spacing: 0;
-  vertical-align: middle; }
-
-/* line 22, ../../../../../../../usr/local/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_reset.sass */
-a img {
-  border: none; }
-
 /* line 3, ../../app/stylesheets/index.sass */
 body {
   background-color: #fff;
   color: #000;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-align: center; }
+  text-align: center;
+}
 
 /* line 9, ../../app/stylesheets/index.sass */
 h1 {
   font-size: 40px;
   font-weight: bold;
   letter-spacing: -2px;
-  margin-top: 20px; }
+  margin-top: 20px;
+}
 
 /* line 15, ../../app/stylesheets/index.sass */
 p {
@@ -90,40 +20,48 @@ p {
   margin-bottom: 10px;
   font-size: 14px;
   line-height: 25px;
-  color: #a4a4a4; }
+  color: #a4a4a4;
+}
 
 /* line 24, ../../app/stylesheets/index.sass */
 a:link, a:active, a:hover, a:visited {
   color: #000;
-  text-decoration: none; }
+  text-decoration: none;
+}
 /* line 28, ../../app/stylesheets/index.sass */
 a:hover {
   color: #777;
-  text-decoration: underline; }
+  text-decoration: underline;
+}
 
 /* line 33, ../../app/stylesheets/index.sass */
 div#container {
   width: 800px;
   margin: 0 auto;
   text-align: left;
-  padding-left: 50px; }
+  padding-left: 50px;
+}
 /* line 39, ../../app/stylesheets/index.sass */
 div#table {
   padding-top: 0px;
   text-align: left;
   margin: 0 auto;
-  clear: both; }
+  clear: both;
+}
 
 /* line 45, ../../app/stylesheets/index.sass */
 ul#contents {
-  margin-top: 30px; }
-  /* line 48, ../../app/stylesheets/index.sass */
-  ul#contents li {
-    margin-top: 15px;
-    padding-top: 15px;
-    margin-bottom: 15px;
-    border-top: 1px solid #e1e1e1;
-    list-style: none; }
-    /* line 55, ../../app/stylesheets/index.sass */
-    ul#contents li a {
-      color: #000; }
+  margin-top: 30px;
+}
+/* line 48, ../../app/stylesheets/index.sass */
+ul#contents li {
+  margin-top: 15px;
+  padding-top: 15px;
+  margin-bottom: 15px;
+  border-top: 1px solid #e1e1e1;
+  list-style: none;
+}
+/* line 55, ../../app/stylesheets/index.sass */
+ul#contents li a {
+  color: #000;
+}

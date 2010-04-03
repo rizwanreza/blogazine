@@ -1,32 +1,28 @@
-- form_for(['admin', @post], :html => {:multipart => true}) do |f|
+- form_for(['admin', @post], :html => {:multipart => true, :class => 'horizontal'}) do |f|
   = f.error_messages
-  %p
+  .field
     = f.label :title
-    %br
-    = f.text_field :title
-  %p
+    = f.text_field :title, :class => 'text'
+  .field
     = f.label :author
-    %br
-    = f.text_field :author
-  %p
+    = f.text_field :author, :class => 'text'
+  .field
     = f.label :slug
-    %br
-    = f.text_field :slug
-  %p
+    = f.text_field :slug, :class => 'text'
+  .field
     = f.label :summary
-    %br
-    = f.text_area :summary
-  %p
-    = f.label :body
-    %br
-    = f.text_area :body
-  %p
+    = f.text_area :summary, :class => 'text'
+  .field
     = f.label :sass
-    %br
-    = f.file_field :sass
-  %p
+    = f.file_field :sass, :class => 'text'
+  .field
+    = f.label :body, "Haml"
+    = f.text_area :body, :class => 'text'
+  .field
     = f.label :published
-    %br
-    = f.check_box :published
-  %p
+    = f.check_box :published, :class => 'text'
+
+  .buttons
     = f.submit "Submit"
+    =# submit_tag "Reset", :name => 'reset', :type => 'reset', :id => 'post_reset'
+    = link_to "Cancel", :back

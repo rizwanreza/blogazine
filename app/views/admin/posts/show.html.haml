@@ -1,27 +1,60 @@
-- title "Post"
+- title @post.title
 
-%p
-  %strong Title:
-  =h @post.title
-%p
-  %strong Slug:
-  =h @post.slug
-%p
-  %strong Summary:
-  =h @post.summary
-%p
+- content_for(:buttons) do
+  = link_to "Edit", edit_admin_post_path(@post), :id => "edit-button"
+  - if @post.published?
+    = link_to "Restrain", admin_post_path(@post), :confirm => 'Are you sure?', :method => :delete, :id => "unpublish-button"
+  - unless @post.published?
+    = link_to "Delete", admin_post_path(@post), :confirm => 'Are you sure?', :method => :delete, :id => "delete-button"
+    = link_to "Publish", edit_admin_post_path(@post), :id => "publish-button"
+  
+
+#post
+  %h3
+    Summary
+  %p.highlight
+    =h @post.summary
+  
+  - unless @post.comments.empty?
+    %h3
+      Comments on this Post
+
+    %ul#comments
+      - @post.comments.each do |comment|
+        %li
+          %p.highlight 
+            =h comment.body
+          %p.small
+            = "By #{comment.name}, #{display_date comment.created_at} on"
+            = link_to comment.post.title, admin_post_path(comment.post)
+          %p.small
+            = link_to comment_approved(comment), admin_comment_path(comment)
+
+#post-info
+  %h3
+    Metadata
+  %ul
+    %li#author
+      By
+      %span
+        =h @post.author
+    %li#submitted
+      Submitted on
+      = display_date(@post.created_at)
+    - unless @post.created_at == @post.updated_at
+      %li#updated
+        Last updated on
+        = display_date(@post.updated_at) 
+    %li#slug
+      Slug 
+      =h @post.slug
+    %li#sass
+      Sass Filename
+      = excerpt(@post.sass.filename, '.sass')
+    %li#published-text
+      = @post.published ? "Published" : "Not Yet Published"
+
+
+%p{:style => "display: none"}
   %strong Body:
   =h @post.body
-%p
-  %strong Sass:
-  =h @post.sass
-%p
-  %strong Published:
-  =h @post.published
-
-%p
-  = link_to "Edit", edit_admin_post_path(@post)
-  |
-  = link_to "Destroy", admin_post_path(@post), :confirm => 'Are you sure?', :method => :delete
-  |
-  = link_to "View All", admin_posts_path

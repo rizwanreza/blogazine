@@ -11,7 +11,7 @@ Rails::Initializer.run do |config|
   config.gem "formtastic"
   
   config.gem "warden"
-  config.gem "devise"
+  config.gem "devise", :version => '1.0.6'
 
   config.time_zone = 'UTC'
 end

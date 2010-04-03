@@ -1,21 +1,25 @@
 /*
-Sass::SyntaxError: Undefined mixin 'column'.
-on line 3 of /Users/rizwanreza/code/active/blogazine/app/stylesheets/admin/dashboard.sass
+Sass::SyntaxError: Undefined variable: "!font_headings".
+on line 17 of /Users/rizwanreza/code/active/blogazine/app/stylesheets/admin/form.sass
 
-1: #second-row
-2:   #recent-comments
-3:     +column(14)
-4:     ul
-5:       +no-bullets
-6:       
-7:       li
-8:         :border-bottom 1px solid #eee
-9:         :padding-top 16px
+13:   
+14: .buttons
+15:   padding-left: 150px
+16:   a
+17:     :font-family = !font_headings
+18:     :font-size 80%
+19: 
+20: label:hover
+21:   text-decoration: underline
+22: 
+23: #post_submit
 
 
 Backtrace:
-/Users/rizwanreza/code/active/blogazine/app/stylesheets/admin/dashboard.sass:3
-/usr/local/lib/ruby/gems/1.8/gems/haml-2.2.16/lib/sass/tree/mixin_node.rb:27:in `_perform'
+/Users/rizwanreza/code/active/blogazine/app/stylesheets/admin/form.sass:17
+/usr/local/lib/ruby/gems/1.8/gems/haml-2.2.16/lib/sass/script/variable.rb:27:in `perform'
+/usr/local/lib/ruby/gems/1.8/gems/haml-2.2.16/lib/sass/tree/prop_node.rb:99:in `perform!'
+/usr/local/lib/ruby/gems/1.8/gems/haml-2.2.16/lib/sass/tree/node.rb:181:in `_perform'
 /usr/local/lib/ruby/gems/1.8/gems/haml-2.2.16/lib/sass/tree/node.rb:158:in `perform'
 /usr/local/lib/ruby/gems/1.8/gems/haml-2.2.16/lib/sass/tree/node.rb:202:in `perform_children'
 /usr/local/lib/ruby/gems/1.8/gems/haml-2.2.16/lib/sass/tree/node.rb:202:in `map'
@@ -101,4 +105,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Sass::SyntaxError: Undefined mixin 'column'.\A on line 3 of /Users/rizwanreza/code/active/blogazine/app/stylesheets/admin/dashboard.sass\A \A 1: #second-row\A 2:   #recent-comments\A 3:     +column(14)\A 4:     ul\A 5:       +no-bullets\A 6:       \A 7:       li\A 8:         :border-bottom 1px solid #eee\A 9:         :padding-top 16px\A "; }
+  content: "Sass::SyntaxError: Undefined variable: \"!font_headings\".\A on line 17 of /Users/rizwanreza/code/active/blogazine/app/stylesheets/admin/form.sass\A \A 13:   \A 14: .buttons\A 15:   padding-left: 150px\A 16:   a\A 17:     :font-family = !font_headings\A 18:     :font-size 80%\A 19: \A 20: label:hover\A 21:   text-decoration: underline\A 22: \A 23: #post_submit\A "; }
