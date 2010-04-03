@@ -1,7 +1,7 @@
 class DeviseCreateAdmins < ActiveRecord::Migration
   def self.up
     create_table(:admins) do |t|
-      t.authenticatable :encryptor => :sha1, :null => false
+      t.database_authenticatable
       t.rememberable
       t.timestamps
     end

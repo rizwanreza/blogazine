@@ -1,6 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
   map.devise_for :admins, :as => 'admin',  :path_names => { :sign_in => 'login', :sign_out => 'logout' }
-
+  map.admin_root '/admin', :controller => 'admin/dashboard', :action => 'index'
   map.namespace :admin do |admin|
     admin.resources :posts
     admin.resources :comments, :only => [:index, :update, :edit, :destroy]

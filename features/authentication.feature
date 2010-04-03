@@ -5,8 +5,7 @@ Feature: Authentication
 
   Scenario: the admin logs in
     Given I am on the login page
-    When I fill in "admin@admins.com" and "abcd1234"
-    Then I should see "Recent Comments"
-  
-  
-  
+    When I fill in "admin_email" with "admin@admins.com"
+    And I fill in "admin_password" with "abcd1234"
+    And I press "admin_submit"
+    Then I should see "Dashboard"
