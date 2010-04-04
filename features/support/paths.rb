@@ -13,7 +13,17 @@ module NavigationHelpers
 
     when /the login page/
       admin_session_path
-
+    
+    when /dashboard/
+      admin_path
+      
+    when /the New Post page/
+      new_admin_post_path
+    
+    when /the post page/
+      admin_post_path(Post.first.id)
+      
+      
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
